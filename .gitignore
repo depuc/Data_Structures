@@ -1,0 +1,9 @@
+# Ignore compiled binaries
+*.out
+*.o
+*.exe
+a.out
+
+# Optional: ignore backup or temp files too
+*~
+*.swp
