@@ -7,3 +7,5 @@ a.out
 # Optional: ignore backup or temp files too
 *~
 *.swp
+
+

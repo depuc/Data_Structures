@@ -44,6 +44,20 @@ void print_inorder(node* root){
 
 }
 
+
+void print_preorder(node* root){
+    
+    if(root == NULL) return;
+    
+    printf("%d ", root->data);
+    print_preorder(root->left);
+    print_preorder(root->right);
+
+}
+
+
+
+
 int main(){
     node* root = NULL;
 
@@ -55,5 +69,7 @@ int main(){
     insert(root, 60);
     insert(root, 80);
     print_inorder(root);
+    printf("\n");
+    print_preorder(root);
     return 0;
 }
