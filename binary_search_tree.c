@@ -55,6 +55,15 @@ void print_preorder(node* root){
 
 }
 
+void print_postorder(node* root){
+
+    if(root == NULL) return;
+    
+    print_postorder(root->left);
+    print_postorder(root->right);
+    printf("%d ", root->data);
+
+}
 
 
 
