@@ -54,3 +54,22 @@ void insert(HashMap* map, int value, const char* key){
     new_node->next = map->buckets[index];
     map->buckets[index] = new_node;
 }
+
+int main() {
+    HashMap* map = create_table();
+
+    insert(map, 10, "apple");
+    insert(map, 20, "banana");
+    insert(map, 30, "cherry");
+
+    printf("apple: %d\n", get(map, "apple"));   // 10
+    printf("banana: %d\n", get(map, "banana")); // 20
+    printf("cherry: %d\n", get(map, "cherry")); // 30
+
+    insert(map, 100, "banana"); // update value
+    printf("banana (updated): %d\n", get(map, "banana")); // 100
+
+    printf("unknown: %d\n", get(map, "durian")); // -1 (not found)
+
+    return 0;
+}
